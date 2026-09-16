@@ -162,3 +162,35 @@ In my current run, the DagsHub upload did not complete successfully because of a
 
 
 
+\## Question 7
+
+
+
+After cloning the GitHub repository into a new temporary folder, I could see the `data` folder, but the actual Food-11 dataset was not there.
+
+
+
+Inside `data`, I only found:
+
+\- `.gitignore`
+
+\- `food11 dataset.dvc`
+
+
+
+This shows that GitHub contains the DVC pointer file, not the real dataset.
+
+
+
+The command needed to retrieve the dataset is:
+
+
+
+`dvc pull`
+
+
+
+In my test, `dvc pull` did not download the dataset because no default DVC remote was configured in the cloned repository.
+
+
+
