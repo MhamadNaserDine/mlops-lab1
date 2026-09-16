@@ -130,3 +130,35 @@ This `.dvc` file acts as a pointer to the real dataset, while the actual dataset
 
 
 
+
+
+
+
+
+
+\## Question 6
+
+
+
+On GitHub, I can see the project code and the DVC pointer file, but I do not see the actual Food-11 image dataset.
+
+
+
+The file `data/food11 dataset.dvc` points to the tracked dataset version.
+
+
+
+The actual dataset is supposed to be stored in the DVC remote on DagsHub after running `dvc push`.
+
+
+
+In my current run, the DagsHub upload did not complete successfully because of authentication errors, so the full dataset is not yet available there.
+
+
+
+
+
+
+
+
+
