@@ -52,3 +52,81 @@ The files that should be pushed to Git are the non-secret DVC configuration file
 
 `config.local`, the cache folder, and temporary files should not be pushed to Git.
 
+
+
+
+
+
+
+
+
+\## Question 3
+
+
+
+In my setup, the DVC remote URL is stored in `.dvc/config`.
+
+
+
+The authentication information is stored in `.dvc/config.local` because I configured the credentials using the `--local` option.
+
+
+
+Other options include:
+
+\- `--global`: stores the configuration for the current user and makes it available across repositories.
+
+\- `--local`: stores repository-specific private configuration in `.dvc/config.local`.
+
+\- Without these options, DVC stores the repository configuration in `.dvc/config`.
+
+
+
+Credentials should never be pushed to GitHub. The `.dvc/config.local` file should remain local because it may contain sensitive authentication information. Only the non-secret `.dvc/config` should be committed.
+
+
+
+
+
+\## Question 4
+
+
+
+After running DVC on the dataset, DVC added `/food11 dataset` to `data/.gitignore`.
+
+
+
+This means Git will ignore the real Food-11 dataset folder and will not upload all of the image files to GitHub. Instead, Git tracks the small `.dvc` metadata file, while DVC manages the actual dataset.
+
+
+
+
+
+\## Question 5
+
+
+
+Yes, I have a `.dvc` file named `data/food11 dataset.dvc`.
+
+
+
+It contains metadata about the tracked dataset, including:
+
+
+
+\- MD5 hash: identifies the exact dataset version.
+
+\- Size: `1188442712` bytes.
+
+\- Number of files: `16643`.
+
+\- Hash type: `md5`.
+
+\- Path: `food11 dataset`.
+
+
+
+This `.dvc` file acts as a pointer to the real dataset, while the actual dataset files are managed by DVC instead of Git.
+
+
+
