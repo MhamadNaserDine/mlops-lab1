@@ -194,3 +194,22 @@ In my test, `dvc pull` did not download the dataset because no default DVC remot
 
 
 
+
+
+
+
+
+
+## DVC Storage Solution
+
+Because pushing the full Food-11 dataset to DagsHub caused authentication and network problems, I used the local DVC remote option allowed by the lab.
+
+The local DVC remote is outside the Git repository at:
+
+`C:\Users\HPI\dvc-storage\mlops-lab1`
+
+After running `dvc push`, the data was successfully pushed to the local DVC remote.
+
+GitHub stores the code and DVC pointer files, while the actual dataset versions are stored in the local DVC remote.
+
+
