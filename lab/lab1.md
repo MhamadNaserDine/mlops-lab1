@@ -195,6 +195,13 @@ In my test, `dvc pull` did not download the dataset because no default DVC remot
 
 
 
+## Question 8
+
+After checking out the older commit `cc57708` and running `dvc checkout`, the folders `food11_processed` and `food11_processed_mini` were no longer present. Only `food11_raw` remained.
+
+After switching back to the `main` branch and running `dvc checkout` again, the folders `food11_processed` and `food11_processed_mini` were restored.
+
+This shows that Git and DVC can be used together to switch between different versions of both the code and the data.
 
 
 
