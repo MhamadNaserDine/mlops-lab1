@@ -1,0 +1,26 @@
+# Local Python environment (rebuilt inside the image)
+.venv/
+
+# Dataset (not needed to serve the model)
+data/
+
+# MLflow local storage (the model is fetched from the MLflow server at runtime)
+mlruns/
+mlartifacts/
+mlflow.db
+
+# Git and DVC metadata
+.git/
+.dvc/
+.gitignore
+.dvcignore
+
+# Python cache files
+__pycache__/
+**/__pycache__/
+*.pyc
+
+# Editor / OS files
+.vscode/
+.idea/
+*.log
